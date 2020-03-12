@@ -1,5 +1,5 @@
 {
-  "name": "extract-loader",
+  "name": "@altairwei/collect-loader",
   "version": "3.1.0",
   "description": "webpack loader to extract HTML and CSS from the bundle",
   "main": "lib/extractLoader.js",
@@ -10,9 +10,12 @@
     "release": "standard-version",
     "prepublishOnly": "npm run build"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/peerigon/extract-loader.git"
+    "url": "git+https://github.com/altairwei/collect-loader.git"
   },
   "keywords": [
     "webpack",
@@ -21,12 +24,12 @@
     "html",
     "css"
   ],
-  "author": "peerigon <developers@peerigon.com>",
+  "author": "altair_wei <altair_wei@outlook.com>",
   "license": "Unlicense",
   "bugs": {
-    "url": "https://github.com/peerigon/extract-loader/issues"
+    "url": "https://github.com/altairwei/collect-loader/issues"
   },
-  "homepage": "https://github.com/peerigon/extract-loader#readme",
+  "homepage": "https://github.com/altairwei/collect-loader#readme",
   "engines": {
     "node": ">= 6.0.0"
   },

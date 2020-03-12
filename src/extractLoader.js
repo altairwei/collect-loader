@@ -136,20 +136,6 @@ function evalDependencyGraph({loaderContext, src, filename, publicPath = ""}) {
                     return moduleCache.get(absolutePath);
                 }
 
-                // If the required file is a js file, we just require it with node's require.
-                // If the required file should be processed by a loader we do not touch it (even if it is a .js file).
-                if (loaders === "" && ext === ".js") {
-                    // Mark the file as dependency so webpack's watcher is working for the css-loader helper.
-                    // Other dependencies are automatically added by loadModule() below
-                    loaderContext.addDependency(absolutePath);
-
-                    const exports = require(absolutePath); // eslint-disable-line import/no-dynamic-require
-
-                    moduleCache.set(absolutePath, exports);
-
-                    return exports;
-                }
-
                 newDependencies.push({
                     absolutePath,
                     absoluteRequest: loaders + absolutePath + query,
