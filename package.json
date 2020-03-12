@@ -10,9 +10,6 @@
     "release": "standard-version",
     "prepublishOnly": "npm run build"
   },
-  "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/altairwei/collect-loader.git"
